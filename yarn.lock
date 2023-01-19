@@ -5379,10 +5379,10 @@ react-native-gradle-plugin@^0.70.3:
   resolved "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.70.3.tgz"
   integrity sha512-oOanj84fJEXUg9FoEAQomA8ISG+DVIrTZ3qF7m69VQUJyOGYyDZmPqKcjvRku4KXlEH6hWO9i4ACLzNBh8gC0A==
 
-react-native-udp@^4.1.6:
-  version "4.1.6"
-  resolved "https://registry.yarnpkg.com/react-native-udp/-/react-native-udp-4.1.6.tgz#2df9e4f1c69719956c9e727b60cbb2c743a77cd3"
-  integrity sha512-d7whGPt+Ami+1buik3fU7y9wKk997eHhlTEeeOTumM7CP0MImHDN6cdoqmvYYrNc3MaMfW73v7+uqIJ7hsaS2A==
+react-native-udp@4.1.5:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-udp/-/react-native-udp-4.1.5.tgz#bd164fa6280fd61c3b19f89e0aff2d2d058c262b"
+  integrity sha512-+4Jt0sbuq7lozbiUY6YtEE7KQIcp/xEnTsU44YaIUHE84wKP5STDBe0Vac6sKDdn/gKVV44RUBobzXnOLKcqFA==
   dependencies:
     buffer "^5.6.0"
     events "^3.1.0"
