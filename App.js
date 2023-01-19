@@ -38,52 +38,22 @@ export default function App() {
       updateChatter("a bound to " + JSON.stringify(a.address()));
     });
     
-    //let b = dgram.createSocket("udp4");
-    //var bIp = drone.ip
-    //var bPort = drone.port;
-    //b.bind(bPort, function (err) {
-    //  if (err) throw err;
-    //  updateChatter("b bound to " + JSON.stringify(b.address()));
-    //});
-
     a.on("message", function (data, rinfo) {
       var str = String.fromCharCode.apply(null, new Uint8Array(data));
       updateChatter("a received echo " + str + " " + JSON.stringify(rinfo));
       a.close();
       a = null;
-    //  b.close();
-    //  b = null;
     });
-const data = "Hello";
+      
+    const data = toByteArray("hello");;
 
-      a.send(data, 0, data.length, 4000, "127.0.0.1", function (err) {
+      a.send(data, 0, data.length, 4000, "192.168.28.4", function (err) {
         if (err) throw err;
         updateChatter("b echoed data");
       });
-    //});
-
-    //b.on("message", function (data, rinfo) {
-    //  var str = String.fromCharCode.apply(null, new Uint8Array(data));
-    //  updateChatter("b received " + str + " " + JSON.stringify(rinfo));
-
-      // echo back
-    //  b.send(data, 0, data.length, aPort, "127.0.0.1", function (err) {
-    //    if (err) throw err;
-    //    updateChatter("b echoed data");
-    //  });
-    //});
-
-    //b.once("listening", function () {
-    //  var msg = toByteArray("hello");
-    //  a.send(msg, 0, msg.length, bPort, "127.0.0.1", function (err) {
-    //    if (err) throw err;
-    //    updateChatter("a sent data");
-    //  });
-    //});
     
     return () => {
       if (a) a.close();
-      //if (b) b.close();
     };
     
   }, []);
